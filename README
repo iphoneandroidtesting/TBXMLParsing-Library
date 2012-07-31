@@ -1,1 +1,28 @@
-HELLO  EVERYONE
+This project will help you to parse the web service using TBXML Parsing.
+
+For using this you just add the folowing files in your project.
+Into a separate folder.
+
+TBParsing.h
+TBparsing.m
+NSDataAdditions.h
+NSDataAdditions.m
+TBXML.h
+TBXML.m
+libParsingLib.a
+
+In Your project viewcontroller import TBParsing.h.
+Then in ViewController.m write this code.
+
+TBParsing *parsing = [TBParsing alloc]initWithUrlString@"// Your web service url //";
+  NSlog(@"Element Name..%@",[parsing displayElementName]);
+  NSlog(@"Attribute Name..%@",[parsing displayAttributeName]);
+  NSlog(@"Attribute Value..%@",[parsing displayAttributeValue]);
+
+
+Or... you can save these values into your arrays.
+
+NSArray *array1 = [[NSArray alloc]initWithArray:[parsing displayElementName]];
+NSArray *array2 = [[NSArray alloc]initWithArray:[parsing displayAttributeName]];
+NSArray *array3 = [[NSArray alloc]initWithArray:[parsing displayAttributeValue]];
+
